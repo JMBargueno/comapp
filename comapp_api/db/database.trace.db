@@ -1,0 +1,432 @@
+2020-05-25 16:22:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:22:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:22:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:22:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:22:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:23:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:23:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:23:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:23:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:23:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:27:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:27:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:27:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:27:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:27:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:34:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:34:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:34:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:34:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:34:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:36:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:36:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:36:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:36:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:36:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:42:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:42:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:42:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:42:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:42:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:46:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:46:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:46:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:46:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:46:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:51:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:51:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:51:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:51:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:51:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-25 16:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; se esperaba "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-25 16:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BINARY NOT NULL, COMMENT VARCHAR(255), CREATION_DATE TIMESTAMP, FINISHED BOOLEAN, LAST_MODIFIED TIMESTAMP, TITLE VARCHAR(255), COMMUNITY_ID BINARY, CREATOR_ID BINARY, MADE_BY_ID BINARY, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id binary not null, comment varchar(255), creation_date timestamp, finished boolean, last_modified timestamp, title varchar(255), community_id binary, creator_id binary, made_by_id binary, primary key (id)) [42001-200]
+2020-05-25 16:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK8HS4H60US6Y4B21QS7NXOY577 FOREIGN KEY (COMMUNITY_ID) REFERENCES COMMUNITY"; expected "identifier"; SQL statement:
+alter table order add constraint FK8hs4h60us6y4b21qs7nxoy577 foreign key (community_id) references community [42001-200]
+2020-05-25 16:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGPKL4CXK2G9EW8EJK4CFS7N72 FOREIGN KEY (CREATOR_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgpkl4cxk2g9ew8ejk4cfs7n72 foreign key (creator_id) references app_user [42001-200]
+2020-05-25 16:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKGXDO04QJE0O31541TVID0MOMO FOREIGN KEY (MADE_BY_ID) REFERENCES APP_USER"; expected "identifier"; SQL statement:
+alter table order add constraint FKgxdo04qje0o31541tvid0momo foreign key (made_by_id) references app_user [42001-200]
+2020-05-28 17:14:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "C" no encontrada
+Column "C" not found; SQL statement:
+SELECT DISTINCT C FROM COMMUNITY_MEMBERS C WHERE MEMBERS_ID=02 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Select.prepare(Select.java:1206)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.jmbargueno.comapp.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.kt:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-05-28 17:14:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "C" no encontrada
+Column "C" not found; SQL statement:
+SELECT DISTINCT C FROM COMMUNITY_MEMBERS WHERE MEMBERS_ID=02 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Select.prepare(Select.java:1206)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.jmbargueno.comapp.security.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.kt:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
