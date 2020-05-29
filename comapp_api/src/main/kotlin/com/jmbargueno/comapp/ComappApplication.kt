@@ -42,5 +42,7 @@ class InitDataComponent(val userRepository: UserRepository,
 
         var order: OrderEntity = NewOrderDTO("Necesito patatas", "Necesito dos kilos de patatas").toOrderEntity(user)
         orderEntityRepository.save(order)
+        community.orders.add(order)
+        communityRepository.save(community)
     }
 }

@@ -10,7 +10,7 @@ import java.util.*
 data class CommunityDTO(
         val id: UUID? = null,
         var title: String,
-        var orders: MutableList<OrderDTO>? = null,
+        var orders: MutableList<OrderDTO>? = mutableListOf(),
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss")
         var creationDate: LocalDateTime,
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss")
@@ -38,20 +38,10 @@ fun NewCommunityDTO.toCommunity(user: AppUser) = Community(
 )
 
 fun transformMutableListOrders(raw: MutableList<OrderEntity>?): MutableList<OrderDTO>? {
-    var result: MutableList<OrderDTO>? = null
+    var result: MutableList<OrderDTO>? = mutableListOf()
     if (raw != null) {
         for (element in raw) {
             result?.add(element.toOrderDTO())
-        }
-    }
-    return result
-}
-
-fun transformMutableListMembers(raw: MutableList<AppUser>?): MutableList<AppUserDTO>? {
-    var result: MutableList<AppUserDTO>? = null
-    if (raw != null) {
-        for (element in raw) {
-            result?.add(element.toAppUserDTO())
         }
     }
     return result
