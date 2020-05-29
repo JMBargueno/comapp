@@ -14,11 +14,8 @@ import javax.persistence.*
 data class Community(
         var title: String,
         @JsonBackReference
-        @OneToMany(mappedBy = "memberOf", fetch = FetchType.EAGER)
-        var members: MutableList<AppUser>? = null,
-        @JsonBackReference
-        @OneToMany(mappedBy = "community", fetch = FetchType.EAGER)
-        var orders: MutableList<OrderEntity>,
+        @OneToMany(fetch = FetchType.EAGER)
+        var orders: MutableList<OrderEntity> = mutableListOf(),
         @CreatedDate
         var creationDate: LocalDateTime? = null,
         @LastModifiedDate
@@ -27,4 +24,8 @@ data class Community(
         var creator: AppUser,
         @Id @GeneratedValue
         val id: UUID? = null
-)
+){
+        override fun toString(): String {
+                return "$id,$title"
+        }
+}

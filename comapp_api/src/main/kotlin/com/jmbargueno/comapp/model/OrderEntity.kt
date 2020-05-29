@@ -17,8 +17,6 @@ data class OrderEntity(
         var title: String,
         var comment: String,
         var finished: Boolean? = false,
-        @ManyToOne
-        var community: Community,
         @CreatedDate
         var creationDate: LocalDateTime? = null,
         @LastModifiedDate
@@ -30,4 +28,8 @@ data class OrderEntity(
         @Id @GeneratedValue
         val id: UUID? = null
 
-)
+){
+        override fun toString(): String {
+                return "$id,$title"
+        }
+}

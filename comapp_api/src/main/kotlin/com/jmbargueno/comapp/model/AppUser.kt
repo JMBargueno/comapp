@@ -55,6 +55,9 @@ data class AppUser(
             return super.hashCode()
         return id.hashCode()
     }
+    override fun toString(): String {
+        return "$id,$username"
+    }
 }
 
 

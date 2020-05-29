@@ -21,7 +21,7 @@ class OrderEntityController(private val orderEntityService: OrderEntityService, 
     fun newOrder(@PathVariable id: UUID, @RequestBody orderDTO: NewOrderDTO, @AuthenticationPrincipal user: AppUser): ResponseEntity<*> {
         val community: Optional<Community> = communityService.findById(id)
         if (community.isEmpty) throw ResponseStatusException(HttpStatus.BAD_REQUEST, "No se ha encontrado esa comunidad")
-        val result = orderEntityService.save(orderDTO.toOrderEntity(user, community.get()))
+        val result = orderEntityService.save(orderDTO.toOrderEntity(user))
         if (result != null) return ResponseEntity<OrderDTO>(result.toOrderDTO(), HttpStatus.CREATED)
         else throw ResponseStatusException(
                 HttpStatus.BAD_REQUEST, "${orderDTO.title} no se ha podido crear con éxito")

@@ -12,7 +12,6 @@ data class OrderDTO(
         var title: String,
         var comment: String,
         var finished: Boolean,
-        var community: Community,
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss")
         var creationDate: LocalDateTime,
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss")
@@ -26,7 +25,6 @@ fun OrderEntity.toOrderDTO() = OrderDTO(
         title = this.title,
         comment = comment,
         finished = this.finished!!,
-        community = this.community!!,
         creationDate = this.creationDate!!,
         lastModified = this.lastModified!!,
         madeBy = madeBy?.toAppUserDTO(),
@@ -39,11 +37,10 @@ data class NewOrderDTO(
         var comment: String
 )
 
-fun NewOrderDTO.toOrderEntity(creator: AppUser, community: Community) = OrderEntity(
+fun NewOrderDTO.toOrderEntity(creator: AppUser) = OrderEntity(
         title,
         comment,
-        creator = creator,
-        community = community
+        creator = creator
 )
 
 

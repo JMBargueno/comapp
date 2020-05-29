@@ -38,10 +38,9 @@ class InitDataComponent(val userRepository: UserRepository,
         var user: AppUser = UserSignUp("user", passwordEncoder.encode("1234")).toAppUser()
         user.memberOf = community
         userRepository.save(user)
-        community.members?.add(user)
         communityRepository.save(community)
 
-        var order: OrderEntity = NewOrderDTO("Necesito patatas", "Necesito dos kilos de patatas").toOrderEntity(user, community)
+        var order: OrderEntity = NewOrderDTO("Necesito patatas", "Necesito dos kilos de patatas").toOrderEntity(user)
         orderEntityRepository.save(order)
     }
 }
