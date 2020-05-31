@@ -46,12 +46,6 @@ class CommunityController(val communityService: CommunityService) {
         } else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se han encontrado comunidades")
     }
 
-    /*@GetMapping("/")
-    fun getCommunitiesByCreator(@AuthenticationPrincipal user: AppUser): List<CommunityDTO> {
-        val result: List<Community> = communityService.findAllByCreator(user)
-        if (result.isNotEmpty()) return result.map { it.toCommunityDTO() }
-        else throw ResponseStatusException(HttpStatus.NO_CONTENT, "Sin comunidades")
-    }*/
 
     @DeleteMapping("/{id}")
     fun deleteCommunity(@PathVariable id: UUID): ResponseEntity<Void> {
