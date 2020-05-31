@@ -5,6 +5,7 @@ import com.jmbargueno.comapp.model.AppUser
 import com.jmbargueno.comapp.request.RequestLogin
 import com.jmbargueno.comapp.response.JwtUserResponse
 import com.jmbargueno.comapp.security.JwtTokenProvider
+import com.jmbargueno.comapp.service.CommunityService
 import com.jmbargueno.comapp.service.UserService
 import org.springframework.http.HttpStatus
 import org.springframework.security.access.prepost.PreAuthorize
@@ -25,7 +26,8 @@ class AuthController(
         private val authenticationManager: AuthenticationManager,
         private val jwtTokenProvider: JwtTokenProvider,
         private val userService: UserService,
-        private val bCryptPasswordEncoder: BCryptPasswordEncoder
+        private val bCryptPasswordEncoder: BCryptPasswordEncoder,
+        private val communityService: CommunityService
 ) {
 
 
@@ -34,8 +36,12 @@ class AuthController(
         val result = userService.findByUsername(user.username)
         if (result == null) throw ResponseStatusException(HttpStatus.BAD_REQUEST, "El nombre de usuario ${user.username} ya existe.")
         else {
-            user.password = bCryptPasswordEncoder.encode(user.password)
-            return userService.save(user.toAppUser()).toAppUserDTO()
+            val community = user.community?.let { communityService.findByTitle(it) }
+            if (community == null) throw ResponseStatusException(HttpStatus.BAD_REQUEST, "No se ha encontrado la comunidad ${user.community}")
+            else {
+                user.password = bCryptPasswordEncoder.encode(user.password)
+                return userService.save(user.toAppUser(community.get())).toAppUserDTO()
+            }
         }
     }
 

@@ -62,4 +62,13 @@ class CommunityController(val communityService: CommunityService) {
         } else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la comunidad con id: $id")
     }
 
+    @GetMapping("/mycommunity")
+    fun getCommunityByLogedUser(@AuthenticationPrincipal user: AppUser): CommunityDTO {
+        var id : UUID? = user.memberOf?.id
+        var result = id?.let { communityService.findById(it) }
+        if (result != null) {
+            if (result.isPresent) return result.get().toCommunityDTO()
+            else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la comunidad con id: $id")
+        }else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la comunidad con id: $id")
+    }
 }

@@ -30,12 +30,14 @@ class InitDataComponent(val userRepository: UserRepository,
                         val passwordEncoder: PasswordEncoder = BCryptPasswordEncoder()) {
     @PostConstruct
     fun initData() {
-        var admin: AppUser = UserSignUp("admin", passwordEncoder.encode("1234")).toAppUser()
+        var admin: AppUser = UserSignUp("admin", passwordEncoder.encode("1234"), null).toAppUser(null)
         userRepository.save(admin)
         var community: Community = NewCommunityDTO("DoctoFedriani").toCommunity(admin)
         communityRepository.save(community)
+        admin.memberOf = community
+        userRepository.save(admin)
 
-        var user: AppUser = UserSignUp("user", passwordEncoder.encode("1234")).toAppUser()
+        var user: AppUser = UserSignUp("user", passwordEncoder.encode("1234"), null).toAppUser(community)
         user.memberOf = community
         userRepository.save(user)
         communityRepository.save(community)

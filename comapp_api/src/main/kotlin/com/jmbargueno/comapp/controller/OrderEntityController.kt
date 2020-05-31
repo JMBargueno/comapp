@@ -6,6 +6,7 @@ import com.jmbargueno.comapp.model.Community
 import com.jmbargueno.comapp.model.OrderEntity
 import com.jmbargueno.comapp.service.CommunityService
 import com.jmbargueno.comapp.service.OrderEntityService
+import com.jmbargueno.comapp.service.UserService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.security.core.annotation.AuthenticationPrincipal
@@ -15,13 +16,16 @@ import java.util.*
 
 @RestController
 @RequestMapping("/order")
-class OrderEntityController(private val orderEntityService: OrderEntityService, private val communityService: CommunityService) {
+class OrderEntityController(private val orderEntityService: OrderEntityService, private val communityService: CommunityService, private val userService: UserService) {
 
     @PostMapping("/{id}")
     fun newOrder(@PathVariable id: UUID, @RequestBody orderDTO: NewOrderDTO, @AuthenticationPrincipal user: AppUser): ResponseEntity<*> {
         val community: Optional<Community> = communityService.findById(id)
         if (community.isEmpty) throw ResponseStatusException(HttpStatus.BAD_REQUEST, "No se ha encontrado esa comunidad")
-        val result = orderEntityService.save(orderDTO.toOrderEntity(user))
+        var order = orderDTO.toOrderEntity(user)
+        val result = orderEntityService.save(order)
+        community.get().orders.add(order)
+        communityService.save(community.get())
         if (result != null) return ResponseEntity<OrderDTO>(result.toOrderDTO(), HttpStatus.CREATED)
         else throw ResponseStatusException(
                 HttpStatus.BAD_REQUEST, "${orderDTO.title} no se ha podido crear con éxito")
@@ -59,6 +63,20 @@ class OrderEntityController(private val orderEntityService: OrderEntityService, 
         if (result.isPresent) {
             orderEntityService.deleteById(id)
             return ResponseEntity.noContent().build()
+        } else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la orden con id: $id")
+    }
+
+    @PutMapping("/{id}")
+    fun setFinished(@PathVariable id: UUID, @AuthenticationPrincipal user: AppUser): OrderDTO {
+        var searchUser = user.id?.let { userService.findById(it) }
+        var order = orderEntityService.findById(id)
+        if (order.isPresent) {
+            if (searchUser != null) {
+                order.get().madeBy = searchUser.get()
+            }
+            order.get().finished = true
+            orderEntityService.save(order.get())
+            return order.get().toOrderDTO()
         } else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la orden con id: $id")
     }
 }

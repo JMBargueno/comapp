@@ -13,6 +13,7 @@ import java.util.*
 interface CommunityRepository : JpaRepository<Community, UUID> {
     fun findById(id: Long): Optional<Community>
     fun findAllByCreator(creator: AppUser): List<Community>
+    fun findByTitle(title: String): Optional<Community>
 
 
 }

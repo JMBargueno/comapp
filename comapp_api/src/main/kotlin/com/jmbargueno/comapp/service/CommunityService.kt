@@ -9,10 +9,12 @@ import java.util.*
 
 @Service
 class CommunityService() : BaseService<Community, UUID, CommunityRepository>() {
-    fun findAllByCreator(creator: AppUser): List<Community>{
+
+    fun findAllByCreator(creator: AppUser): List<Community> {
         return this.repository.findAllByCreator(creator)
     }
-    /*fun findAllByMember(member: AppUser): List<Community>{
-        return this.repository.findAllByMember(member)
-    }*/
+
+    fun findByTitle(title: String): Optional<Community> {
+        return this.repository.findByTitle(title)
+    }
 }

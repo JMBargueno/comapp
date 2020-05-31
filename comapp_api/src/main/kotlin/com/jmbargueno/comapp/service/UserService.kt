@@ -16,7 +16,7 @@ class UserService(private val encoder: PasswordEncoder) : BaseService<AppUser, U
     fun create(user: UserSignUp): Optional<AppUser> {
         if (findByUsername(user.username).isPresent) return Optional.empty()
         return Optional.of(
-                this.save(user.toAppUser())
+                this.save(user.toAppUser(null))
         )
     }
 }

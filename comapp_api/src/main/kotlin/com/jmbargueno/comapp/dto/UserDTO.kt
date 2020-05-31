@@ -1,6 +1,7 @@
 package com.jmbargueno.comapp.dto
 
 import com.jmbargueno.comapp.model.AppUser
+import com.jmbargueno.comapp.model.Community
 import java.util.*
 
 data class AppUserDTO(
@@ -15,9 +16,10 @@ fun AppUser.toAppUserDTO() = AppUserDTO(
 
 data class UserSignUp(
         var username: String,
-        var password: String
+        var password: String,
+        var community: String?
 );
 
-fun UserSignUp.toAppUser() = AppUser(
-        username, password, ArrayList(),null, "USER"
+fun UserSignUp.toAppUser(community: Community?) = AppUser(
+        username, password, ArrayList(), community, "USER"
 );
