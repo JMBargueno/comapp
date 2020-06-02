@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -69,5 +70,8 @@ dependencies {
     }
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "org.conscrypt:conscrypt-android:$conscryptVersion"
+    //Ayuda a buscar vistas
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    kapt "com.jakewharton:butterknife-compiler:$butterknifeVersion"
 
 }
