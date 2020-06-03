@@ -12,8 +12,6 @@ class AppUserViewModel {
     }
 
     fun doLogin(request: RequestLogin): MutableLiveData<AppUser>? {
-        if (repository != null) {
-            return repository.login(request)
-        } else return null
+        return repository?.login(request)
     }
 }
