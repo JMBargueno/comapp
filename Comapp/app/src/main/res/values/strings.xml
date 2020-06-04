@@ -9,4 +9,9 @@
     <string name="string_signup">Registrarse</string>
     <string name="string_validate_password">Repita la contraseña</string>
     <string name="string_community">Comunidad</string>
+    <string name="string_logout">Cerrar sesión</string>
+    <string name="string_item_add">Añadir</string>
+    <string name="string_add_title">Añadit título</string>
+    <string name="string_add_comment">Añadir comentario</string>
+    <string name="string_addOrder_add">Publicar</string>
 </resources>

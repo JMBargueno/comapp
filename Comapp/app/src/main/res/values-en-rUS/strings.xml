@@ -10,4 +10,9 @@
     <string name="string_signup">SignUp</string>
     <string name="string_validate_password">Repeat password</string>
     <string name="string_community">Community</string>
+    <string name="string_logout">Log Out</string>
+    <string name="string_item_add">Add</string>
+    <string name="string_add_title">Add title</string>
+    <string name="string_add_comment">Add comment</string>
+    <string name="string_addOrder_add">Publish</string>
 </resources>

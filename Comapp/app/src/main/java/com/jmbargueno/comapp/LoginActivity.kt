@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import butterknife.BindView
 import butterknife.ButterKnife
@@ -31,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var buttonLogin: Button
 
     @BindView(R.id.textViewLoginRegister)
-    lateinit var textViewLoginRegister: EditText
+    lateinit var textViewLoginRegister: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +56,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setListeners() {
 
-        buttonLogin.setOnClickListener(View.OnClickListener { v ->
+        buttonLogin.setOnClickListener(View.OnClickListener {
             appUserViewModel.login(
                 RequestLogin(
                     username = editTextLoginUsername.text.toString(),
@@ -81,5 +82,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(signUp)
             finish()
         })
+
     }
 }

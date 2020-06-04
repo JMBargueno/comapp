@@ -2,8 +2,12 @@ package com.jmbargueno.comapp.repository
 
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
+import com.jmbargueno.comapp.client.request.RequestNewOrder
 import com.jmbargueno.comapp.client.response.ResponseCommunity
+import com.jmbargueno.comapp.client.response.ResponseLogin
+import com.jmbargueno.comapp.common.Constants
 import com.jmbargueno.comapp.common.MyApp
+import com.jmbargueno.comapp.common.SharedPreferencesModule
 import com.jmbargueno.comapp.model.Order
 import com.jmbargueno.comapp.service.ComappService
 import retrofit2.Call
@@ -14,7 +18,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class CommunityRepository@Inject constructor(
+class CommunityRepository @Inject constructor(
     private var service: ComappService,
     private var retrofit: Retrofit
 ) {
@@ -22,6 +26,7 @@ class CommunityRepository@Inject constructor(
 
     private val community: MutableLiveData<ResponseCommunity> = MutableLiveData<ResponseCommunity>()
     private val orders: MutableLiveData<List<Order>> = MutableLiveData<List<Order>>()
+
 
     fun getCommunityById(id: Long): MutableLiveData<ResponseCommunity> {
         val call: Call<ResponseCommunity> = service.getCommunityById(id)
@@ -46,4 +51,35 @@ class CommunityRepository@Inject constructor(
         })
         return community
     }
+
+    fun getMyCommunity(): MutableLiveData<ResponseCommunity> {
+        val call: Call<ResponseCommunity> = service.getMyCommunity()
+        call.enqueue(object : Callback<ResponseCommunity> {
+
+            override fun onResponse(
+                call: Call<ResponseCommunity>,
+                response: Response<ResponseCommunity>
+            ) {
+                if (response.isSuccessful) {
+                    community.value = response.body()
+                    orders.value = response.body()?.orders
+
+                    SharedPreferencesModule().setStringValue(
+                        Constants.SHARED_PREFERENCES_COMMUNITY,
+                        response.body()!!.id.toString()
+                    )
+                } else {
+
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseCommunity>, t: Throwable) {
+                Toast.makeText(MyApp.instance, t.message, Toast.LENGTH_SHORT).show()
+            }
+
+        })
+        return community
+    }
+
+
 }
