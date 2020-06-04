@@ -2,7 +2,6 @@ package com.jmbargueno.comapp.repository
 
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import com.jmbargueno.comapp.client.ComappApi
 import com.jmbargueno.comapp.client.response.ResponseCommunity
 import com.jmbargueno.comapp.common.MyApp
 import com.jmbargueno.comapp.model.Order
@@ -10,12 +9,16 @@ import com.jmbargueno.comapp.service.ComappService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class CommunityRepository {
-    companion object {
-        var instance: CommunityRepository? = null
-        var service: ComappService = ComappApi.service
-    }
+@Singleton
+class CommunityRepository@Inject constructor(
+    private var service: ComappService,
+    private var retrofit: Retrofit
+) {
+
 
     private val community: MutableLiveData<ResponseCommunity> = MutableLiveData<ResponseCommunity>()
     private val orders: MutableLiveData<List<Order>> = MutableLiveData<List<Order>>()

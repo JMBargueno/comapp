@@ -1,4 +1,6 @@
 package com.jmbargueno.comapp.viewmodel
 
-class CommunityViewModel {
+import androidx.lifecycle.ViewModel
+
+class CommunityViewModel: ViewModel() {
 }

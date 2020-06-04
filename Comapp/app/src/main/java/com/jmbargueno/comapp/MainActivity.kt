@@ -9,22 +9,12 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import butterknife.BindView
 import com.jmbargueno.comapp.viewmodel.AppUserViewModel
 
 class MainActivity : AppCompatActivity() {
     companion object {
         lateinit var appUserViewModel: AppUserViewModel
     }
-
-    @BindView(R.id.buttonLogin)
-    lateinit var buttonLogin: Button
-
-    @BindView(R.id.editTextLoginPassword)
-    lateinit var editTextLoginPassword: EditText
-
-    @BindView(R.id.editTextLoginUsername)
-    lateinit var editTextLoginUsername: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -5,6 +5,7 @@ class Constants {
         val BASE_URL = "http://localhost:1500/"
         val APP_SETTINGS_FILE = "APP_SETTINGS"
         const val SHARED_PREFERENCES_TOKEN = "token"
+        const val TIMEOUT_INMILIS = 30000L
     }
 
 }

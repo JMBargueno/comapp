@@ -1,4 +1,6 @@
 package com.jmbargueno.comapp.client.request
 
-class RequestLogin {
-}
+data class RequestLogin(
+    val username: String,
+    val password: String
+)

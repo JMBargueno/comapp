@@ -35,7 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
+    kapt {
+        generateStubs = true
+    }
 }
 
 dependencies {
@@ -43,6 +45,7 @@ dependencies {
     def retrofitVersion = '2.8.1'
     def conscryptVersion = '2.2.1'
     def butterknifeVersion = '10.2.1'
+    def lottieVersion = '3.4.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -60,7 +63,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation("io.coil-kt:coil:0.10.1")
 
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
@@ -70,8 +72,22 @@ dependencies {
     }
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "org.conscrypt:conscrypt-android:$conscryptVersion"
-    //Ayuda a buscar vistas
+
+    //Para imagenes
+    implementation("io.coil-kt:coil:0.10.1")
+
+
+    //Para dependencias
+
+    implementation 'com.google.dagger:dagger:2.15'
+    kapt 'com.google.dagger:dagger-compiler:2.15'
+
+    //Para buscar vistas
     implementation "com.jakewharton:butterknife:$butterknifeVersion"
     kapt "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+
+    //Para animaciones
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
 }

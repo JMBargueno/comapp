@@ -2,11 +2,16 @@ package com.jmbargueno.comapp.common
 
 import android.content.Context
 import android.content.SharedPreferences
+import dagger.Module
+import dagger.Provides
+import javax.inject.Singleton
+
+@Module
+class SharedPreferencesModule {
 
 
-class SharedPreferencesManager {
-
-
+    @Singleton
+    @Provides
     fun getSharedPreferences(): SharedPreferences {
         return MyApp.instance?.getSharedPreferences(
             Constants.APP_SETTINGS_FILE, Context.MODE_PRIVATE
@@ -19,10 +24,13 @@ class SharedPreferencesManager {
         editor.commit()
     }
 
-    fun removeStringValue(label: String) {
-        var editor: SharedPreferences.Editor = getSharedPreferences().edit()
-        editor.remove(label)
-        editor.commit()
+    fun getStringValue(dataLabel: String): String? {
+        return getSharedPreferences().getString(dataLabel, null)
+    }
 
+    fun removeStringValue(dataLabel: String) {
+        var editor: SharedPreferences.Editor = getSharedPreferences().edit()
+        editor.remove(dataLabel)
+        editor.commit()
     }
 }
