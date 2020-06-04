@@ -35,6 +35,6 @@ interface ComappService {
     fun getMyOrders(): Call<ResponseOrder>
 
     @POST("/order/{id}")
-    fun newOrder(@Path("id") id: Long, @Body request: RequestNewOrder): Call<Order>
+    fun newOrder(@Path("id") id: String, @Body request: RequestNewOrder): Call<Order>
 
 }

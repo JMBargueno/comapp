@@ -47,7 +47,7 @@ class OrderRepository @Inject constructor(
 
     fun newOrder(request: RequestNewOrder): MutableLiveData<Order> {
         val call: Call<Order> = service.newOrder(
-            SharedPreferencesModule().getStringValue(Constants.SHARED_PREFERENCES_COMMUNITY) as Long,
+            SharedPreferencesModule().getStringValue(Constants.SHARED_PREFERENCES_COMMUNITY) as String,
             request
         )
 
