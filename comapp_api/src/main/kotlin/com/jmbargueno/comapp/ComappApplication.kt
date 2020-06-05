@@ -30,14 +30,28 @@ class InitDataComponent(val userRepository: UserRepository,
                         val passwordEncoder: PasswordEncoder = BCryptPasswordEncoder()) {
     @PostConstruct
     fun initData() {
-        var admin: AppUser = UserSignUp("admin", passwordEncoder.encode("1234"), null).toAppUser(null)
+        var admin: AppUser = UserSignUp("admin@admin.com", passwordEncoder.encode("1234"), null).toAppUser(null)
         userRepository.save(admin)
-        var community: Community = NewCommunityDTO("DoctorFedriani").toCommunity(admin)
+        var community: Community = NewCommunityDTO("DoctorFedriani33").toCommunity(admin)
+        var community2: Community = NewCommunityDTO("DoctorFedriani34").toCommunity(admin)
+        var community3: Community = NewCommunityDTO("DoctorFedriani35").toCommunity(admin)
+        var community4: Community = NewCommunityDTO("DoctorFedriani36").toCommunity(admin)
+        var community5: Community = NewCommunityDTO("DoctorFedriani37").toCommunity(admin)
+        var community6: Community = NewCommunityDTO("DoctorFedriani38").toCommunity(admin)
+
         communityRepository.save(community)
+        communityRepository.save(community2)
+        communityRepository.save(community3)
+        communityRepository.save(community4)
+        communityRepository.save(community5)
+        communityRepository.save(community6)
+
+
+
         admin.memberOf = community
         userRepository.save(admin)
 
-        var user: AppUser = UserSignUp("user", passwordEncoder.encode("1234"), null).toAppUser(community)
+        var user: AppUser = UserSignUp("user@user.com", passwordEncoder.encode("1234"), null).toAppUser(community)
         user.memberOf = community
         userRepository.save(user)
         communityRepository.save(community)
