@@ -32,7 +32,7 @@ class InitDataComponent(val userRepository: UserRepository,
     fun initData() {
         var admin: AppUser = UserSignUp("admin", passwordEncoder.encode("1234"), null).toAppUser(null)
         userRepository.save(admin)
-        var community: Community = NewCommunityDTO("DoctoFedriani").toCommunity(admin)
+        var community: Community = NewCommunityDTO("DoctorFedriani").toCommunity(admin)
         communityRepository.save(community)
         admin.memberOf = community
         userRepository.save(admin)
@@ -43,8 +43,11 @@ class InitDataComponent(val userRepository: UserRepository,
         communityRepository.save(community)
 
         var order: OrderEntity = NewOrderDTO("Necesito patatas", "Necesito dos kilos de patatas").toOrderEntity(user)
+        var ordertwo: OrderEntity = NewOrderDTO("Necesito lentejas", "Necesito dos paquetes de lentejas").toOrderEntity(admin)
         orderEntityRepository.save(order)
+        orderEntityRepository.save(ordertwo)
         community.orders.add(order)
+        community.orders.add(ordertwo)
         communityRepository.save(community)
     }
 }

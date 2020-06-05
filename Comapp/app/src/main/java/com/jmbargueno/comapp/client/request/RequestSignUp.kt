@@ -1,4 +1,7 @@
 package com.jmbargueno.comapp.client.request
 
-class RequestSignUp {
-}
+data class RequestSignUp (
+    val username: String,
+    val password: String,
+    val community: String
+)

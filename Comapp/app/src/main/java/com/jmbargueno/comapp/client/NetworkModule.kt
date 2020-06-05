@@ -5,6 +5,7 @@ import com.jmbargueno.comapp.service.ComappService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -34,10 +35,12 @@ class NetworkModule {
     @Singleton
     @Provides
     fun provideRetrofit(@Named("url") baseUrl: String, okHttpClient: OkHttpClient): Retrofit {
+        var logging : HttpLoggingInterceptor = HttpLoggingInterceptor()
+        logging.setLevel(HttpLoggingInterceptor.Level.HEADERS)
         return Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
+            .client(OkHttpClient.Builder().addInterceptor(logging).build())
             .build()
     }
 

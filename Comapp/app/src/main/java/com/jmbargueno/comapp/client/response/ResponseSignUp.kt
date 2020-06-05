@@ -1,4 +1,9 @@
 package com.jmbargueno.comapp.client.response
 
-class ResponseSignUp {
-}
+import com.jmbargueno.comapp.model.AppUser
+
+data class ResponseSignUp (
+    val id: String,
+    val username: String,
+    val rol : String
+)

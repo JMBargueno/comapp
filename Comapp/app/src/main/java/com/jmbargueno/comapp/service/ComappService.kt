@@ -20,7 +20,7 @@ interface ComappService {
     fun login(@Body request: RequestLogin): Call<ResponseLogin>
 
     @POST("/signup")
-    fun login(@Body request: RequestSignUp): Call<ResponseSignUp>
+    fun signUp(@Body request: RequestSignUp): Call<ResponseSignUp>
 
     @GET("/user/me")
     fun getMe(): Call<ResponseLogin>

@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editTextSignUpPasswordTwo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
     <EditText
-        android:id="@+id/editTextSignUpEmail"
+        android:id="@+id/editTextSignUpUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
@@ -20,17 +21,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextSignUpPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="@string/string_password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextSignUpEmail"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSignUpUsername"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextSignUpEmail"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpEmail" />
+        app:layout_constraintStart_toStartOf="@+id/editTextSignUpUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpUsername" />
 
     <EditText
         android:id="@+id/editTextPasswordTwo"
@@ -40,10 +41,10 @@
         android:ems="10"
         android:hint="@string/string_validate_password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSignUpPassword"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintStart_toStartOf="@+id/editTextSignUpPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpPassword" />
 
     <EditText
         android:id="@+id/editTextSignUpCommunity"
@@ -58,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextPasswordTwo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

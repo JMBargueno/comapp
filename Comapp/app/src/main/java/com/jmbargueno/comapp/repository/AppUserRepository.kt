@@ -1,11 +1,16 @@
 package com.jmbargueno.comapp.repository
 
+import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import com.jmbargueno.comapp.MainActivity
 import com.jmbargueno.comapp.client.request.RequestLogin
+import com.jmbargueno.comapp.client.request.RequestSignUp
 import com.jmbargueno.comapp.client.response.APIError
 import com.jmbargueno.comapp.client.response.ResponseLogin
+import com.jmbargueno.comapp.client.response.ResponseSignUp
 import com.jmbargueno.comapp.common.Constants
 import com.jmbargueno.comapp.common.MyApp
 import com.jmbargueno.comapp.common.SharedPreferencesModule
@@ -70,5 +75,40 @@ class AppUserRepository @Inject constructor(
     fun parseError(response: Response<*>): APIError {
         val jsonObject = JSONObject(response.errorBody()!!.string())
         return APIError(jsonObject.getInt("status_code"), jsonObject.getString("status_message"))
+    }
+
+    fun signUp(request: RequestSignUp): MutableLiveData<AppUser> {
+        val call: Call<ResponseSignUp> = service.signUp(request)
+        call?.enqueue(object : Callback<ResponseSignUp> {
+            override fun onFailure(call: Call<ResponseSignUp>, t: Throwable) {
+                Toast.makeText(MyApp.instance, t.message, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onResponse(
+                call: Call<ResponseSignUp>,
+                response: Response<ResponseSignUp>
+            ) {
+                if (response.isSuccessful) {
+                    login(RequestLogin(username = request.username, password = request.password))
+                    Log.d(
+                        "TOKEN",
+                        SharedPreferencesModule().getSharedPreferences().getString(
+                            Constants.SHARED_PREFERENCES_TOKEN,
+                            "null"
+                        )
+                    )
+                } else {
+                    user.postValue(null)
+                    SharedPreferencesModule().removeStringValue(Constants.SHARED_PREFERENCES_TOKEN)
+                    Toast.makeText(
+                        MyApp.instance,
+                        "El usuario o contraseña no es correcto",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                }
+            }
+        })
+        return user
     }
 }
