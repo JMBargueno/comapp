@@ -16,7 +16,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZTUyYmE1Mi1mYThmLTRmMDEtOThkYS0yNjBiMTkzODJiNTgiLCJleHAiOjE1OTE4MTYxMjMsImlhdCI6MTU5MDk1MjEyMywidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.0qBkIQbI3ANtqeAm3wstArXEa-jOJBQGtVFjzyLyyNwPon24SzVD_GgIFGhkE_KiSHa_HTOYkCiiZv_scWe3ag",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyYTVhODRmMy01ODk0LTQ0YjMtOGRiOS1hMjA2Y2NmMjYyNjQiLCJleHAiOjE1OTIwNDI1MzcsImlhdCI6MTU5MTE3ODUzNywidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.ioNO0H2QL_iNdsJwG3TjFitxWxRix5mjncB-jdLjbFzQpT6RgZskhR6riMcOS3J9rdbgi7QUIaiXFbmnVs_rxw",
 									"type": "string"
 								}
 							]
@@ -40,21 +40,28 @@
 				},
 				{
 					"name": "Get community by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMzg5NzJlYS1kNGY5LTQ4YTUtYmY2OC1mYzUzYjAyZWM3M2IiLCJleHAiOjE1OTE4MDE3OTgsImlhdCI6MTU5MDkzNzc5OCwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.cSGh3Xlq9HDmNEl_hoqzztWbrqN2G6C1jTdUOpOPClhsJgcjd6vHWZoUGS7eXM_1UUVQ9ff1iNDDsnFvQ9yPGw",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyYTVhODRmMy01ODk0LTQ0YjMtOGRiOS1hMjA2Y2NmMjYyNjQiLCJleHAiOjE1OTIwNDI1MzcsImlhdCI6MTU5MTE3ODUzNywidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.ioNO0H2QL_iNdsJwG3TjFitxWxRix5mjncB-jdLjbFzQpT6RgZskhR6riMcOS3J9rdbgi7QUIaiXFbmnVs_rxw",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "http://localhost:1500/community/2df97a6f-1d94-4743-9849-565d925edd17",
+							"raw": "http://localhost:1500/community/3d9dc64b-fc76-4ca4-905d-b1e28daadd4f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -62,7 +69,7 @@
 							"port": "1500",
 							"path": [
 								"community",
-								"2df97a6f-1d94-4743-9849-565d925edd17"
+								"3d9dc64b-fc76-4ca4-905d-b1e28daadd4f"
 							]
 						}
 					},
@@ -76,7 +83,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1ZWE0YzZhOC01YmUyLTRkNzYtYjk3ZS00MDQ3ZmY5MDQ0ZDEiLCJleHAiOjE1OTE4MTY0NzcsImlhdCI6MTU5MDk1MjQ3NywidXNlcm5hbWUiOiJ1c2VyMiIsInJvbGVzIjoiVVNFUiJ9.tCdD2Q4m9kb79RexK-eZTKgzkqk1LGdfJ6ydlh8rfkjC1iYUdytl_fGU3dxRAfXtWXttFQB1aMSfFbwniLoJfw",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwOThjYmJhZi0yYjk3LTRmMzMtODY2OS0xNzNiY2ZkOWQxMDciLCJleHAiOjE1OTIyMjgxMjUsImlhdCI6MTU5MTM2NDEyNSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.D1beifycJyf8HR0-q8USlkkXX9WQfxQ5RB3voM8XfYtqhrezvMwSgZnzCAuu0r_EtMLdxntbHRq6I5YRZDEkIA\"",
 									"type": "string"
 								}
 							]
@@ -111,7 +118,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"username\":\"user2\",\n\t\"password\":\"1234\"\n}",
+							"raw": "{\n\t\"username\":\"admin@admin.com\",\n\t\"password\":\"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -119,12 +126,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:1500/auth/login",
-							"protocol": "http",
+							"raw": "https://comappapi.herokuapp.com/auth/login",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"comappapi",
+								"herokuapp",
+								"com"
 							],
-							"port": "1500",
 							"path": [
 								"auth",
 								"login"
@@ -170,7 +178,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"username\":\"user2\",\n\t\"password\":\"1234\", \n\t\"community\":\"DoctoFedriani\"\n}",
+							"raw": "{\n\t\"username\":\"user8\",\n\t\"password\":\"1234\", \n\t\"community\":\"DoctorFedriani\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -205,7 +213,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkNDkxNzlhZC01ZjQwLTQ1YmYtODNkMy0zODkwNzRiMWNmNTYiLCJleHAiOjE1OTE4MDQ0NTAsImlhdCI6MTU5MDk0MDQ1MCwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.tcKfID9EHE53Onb5lrnpJy0wBnOZQIN3wCKi2Aq8_Kudr5A7ZXDdcftW-mXKQmmqcaj4avWzDBN18AFpnvsNUg",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwZjY0Mjk1Yi00MWFjLTQ1N2UtOThkNC0wYzY4MTJiNGIzMTkiLCJleHAiOjE1OTIyMTc2MzcsImlhdCI6MTU5MTM1MzYzNywidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.EWpDn_kcWkjFqs0wUMltYlTbk0-Z-o9dOX-jC8A5xBCZzFOqaOTDbJV-p4kBUPn_q4iPlb3TCYHAlcgcXOvRUA",
 									"type": "string"
 								}
 							]
@@ -228,14 +236,14 @@
 					"response": []
 				},
 				{
-					"name": "Get order by id",
+					"name": "Get order by me",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2ODZlZWRiZi00YmUzLTQ2ZDgtOWRmYS0zMWY4ZmE0ZmRiODkiLCJleHAiOjE1OTE4MDEzOTAsImlhdCI6MTU5MDkzNzM5MCwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.KsD5kias12nfa5aUiWzsHlinjOEgTWvn4YVPahtSBuRkZ9YGA0BwPVIepE7wsKRAl3MqzWrjDFy2EKI4_rehTQ",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMjIxYzQ4Yy05YmMzLTQ2YzEtODQ2MS0wZGZjMzJiMTJjZWQiLCJleHAiOjE1OTIxNTc3ODAsImlhdCI6MTU5MTI5Mzc4MCwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.F99w5BtedHnK4Bezmxvtxx7gB5FRsqmOdIcLHa2VgMT6-ktacyt_0WT68kF_pe8zDi8QiS8QeIWN1xcOEE3pKg",
 									"type": "string"
 								}
 							]
@@ -243,7 +251,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:1500/order/myorders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1500",
+							"path": [
+								"order",
+								"myorders"
+							]
 						}
 					},
 					"response": []
@@ -256,7 +273,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1ZWE0YzZhOC01YmUyLTRkNzYtYjk3ZS00MDQ3ZmY5MDQ0ZDEiLCJleHAiOjE1OTE4MTY0NzcsImlhdCI6MTU5MDk1MjQ3NywidXNlcm5hbWUiOiJ1c2VyMiIsInJvbGVzIjoiVVNFUiJ9.tCdD2Q4m9kb79RexK-eZTKgzkqk1LGdfJ6ydlh8rfkjC1iYUdytl_fGU3dxRAfXtWXttFQB1aMSfFbwniLoJfw",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhMjI4NTIwMC1lOWMxLTQ3OWQtYTQyOS1lZDUyNTdlOTQ2ZWYiLCJleHAiOjE1OTIxNzI1MjAsImlhdCI6MTU5MTMwODUyMCwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.lx4NezDOkO_hPPGlSaiZT3xCwy6ixGWJgpa_n6oUJhszg3Wfokn7bLENMAkO5z10kZh57dmS6HUjwogJhMLqog",
 									"type": "string"
 								}
 							]
@@ -273,7 +290,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:1500/order/42c59632-58f9-4c44-babb-f7b3d57b1521",
+							"raw": "http://localhost:1500/order/3d9dc64b-fc76-4ca4-905d-b1e28daadd4f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -281,7 +298,7 @@
 							"port": "1500",
 							"path": [
 								"order",
-								"42c59632-58f9-4c44-babb-f7b3d57b1521"
+								"3d9dc64b-fc76-4ca4-905d-b1e28daadd4f"
 							]
 						}
 					},
@@ -295,7 +312,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkNDkxNzlhZC01ZjQwLTQ1YmYtODNkMy0zODkwNzRiMWNmNTYiLCJleHAiOjE1OTE4MDQ0NTAsImlhdCI6MTU5MDk0MDQ1MCwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.tcKfID9EHE53Onb5lrnpJy0wBnOZQIN3wCKi2Aq8_Kudr5A7ZXDdcftW-mXKQmmqcaj4avWzDBN18AFpnvsNUg",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwZjY0Mjk1Yi00MWFjLTQ1N2UtOThkNC0wYzY4MTJiNGIzMTkiLCJleHAiOjE1OTIyMTc2MzcsImlhdCI6MTU5MTM1MzYzNywidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.EWpDn_kcWkjFqs0wUMltYlTbk0-Z-o9dOX-jC8A5xBCZzFOqaOTDbJV-p4kBUPn_q4iPlb3TCYHAlcgcXOvRUA",
 									"type": "string"
 								}
 							]
@@ -303,7 +320,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1500/order/dc996d67-95c6-47db-829f-1f8959e4133e",
+							"raw": "http://localhost:1500/order/3d15e178-8297-431d-8810-c3d99dba71af",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -311,7 +328,68 @@
 							"port": "1500",
 							"path": [
 								"order",
-								"dc996d67-95c6-47db-829f-1f8959e4133e"
+								"3d15e178-8297-431d-8810-c3d99dba71af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwZjY0Mjk1Yi00MWFjLTQ1N2UtOThkNC0wYzY4MTJiNGIzMTkiLCJleHAiOjE1OTIyMTYzMjYsImlhdCI6MTU5MTM1MjMyNiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.NXehVB5AmW7qTEOUhxXZkkUpK13ge_iZPY7vVzGjxPnS4Cy92FF_itM3T5_ceq3Y5NkrbvGRj2KDeA9voTPjRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1500/order/3d15e178-8297-431d-8810-c3d99dba71af",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1500",
+							"path": [
+								"order",
+								"3d15e178-8297-431d-8810-c3d99dba71af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmNTFjNWQ1Ni04MTAwLTRlZjAtYTgxMy1jOTBmY2M2NzgxNDUiLCJleHAiOjE1OTIyMjc2MTAsImlhdCI6MTU5MTM2MzYxMCwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjoiVVNFUiJ9.Le65SpdJynIG83kT-dVG6_EXY1vlsVovEssJ91StKfQlxc4hZuB9UZYhDRWSiN1EYWWK1cLuWBNbdE1XT_1qyg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1500/order/0eb0ae69-eaa0-4c03-8311-ab10082d6f66/68fdca0e-2952-4b04-b4d0-4824c61a45b4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1500",
+							"path": [
+								"order",
+								"0eb0ae69-eaa0-4c03-8311-ab10082d6f66",
+								"68fdca0e-2952-4b04-b4d0-4824c61a45b4"
 							]
 						}
 					},
