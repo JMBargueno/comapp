@@ -14,7 +14,7 @@ import javax.persistence.*
 data class Community(
         var title: String,
         @JsonBackReference
-        @OneToMany(fetch = FetchType.EAGER)
+        @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true, cascade = arrayOf(CascadeType.REMOVE))
         var orders: MutableList<OrderEntity> = mutableListOf(),
         @CreatedDate
         var creationDate: LocalDateTime? = null,

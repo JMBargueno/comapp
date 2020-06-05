@@ -13,6 +13,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
 import java.util.*
+import kotlin.collections.ArrayList
 
 @RestController
 @RequestMapping("/order")
@@ -39,10 +40,35 @@ class OrderEntityController(private val orderEntityService: OrderEntityService, 
     }
 
     @GetMapping("/myorders")
-    fun getOrdersByCreator(@AuthenticationPrincipal user: AppUser): List<OrderDTO> {
-        val result: List<OrderEntity> = orderEntityService.findAllByCreator(user)
-        if (result.isNotEmpty()) return result.map { it.toOrderDTO() }
-        else throw ResponseStatusException(HttpStatus.NO_CONTENT, "Sin ordenes")
+    fun getOrdersByCreatorAndUnfinished(@AuthenticationPrincipal user: AppUser): List<OrderDTO> {
+        val orders: List<OrderEntity> = orderEntityService.findAllByCreator(user)
+        var result: MutableList<OrderEntity> = ArrayList()
+        if (orders.isNotEmpty()) {
+
+
+            for (order in orders) {
+                if (order.finished == false) {
+                    result.add(order)
+                }
+            }
+            return result.map { it.toOrderDTO() }
+        } else throw ResponseStatusException(HttpStatus.NO_CONTENT, "Sin ordenes")
+    }
+
+    @GetMapping("/myorders/historic")
+    fun getOrdersByCreatorAndFinished(@AuthenticationPrincipal user: AppUser): List<OrderDTO> {
+        val orders: List<OrderEntity> = orderEntityService.findAllByCreator(user)
+        var result: MutableList<OrderEntity> = ArrayList()
+        if (orders.isNotEmpty()) {
+
+
+            for (order in orders) {
+                if (order.finished == true) {
+                    result.add(order)
+                }
+            }
+            return result.map { it.toOrderDTO() }
+        } else throw ResponseStatusException(HttpStatus.NO_CONTENT, "Sin ordenes")
     }
 
     @GetMapping("/")
@@ -57,9 +83,13 @@ class OrderEntityController(private val orderEntityService: OrderEntityService, 
         } else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se han encontrado ordenes")
     }
 
-    @DeleteMapping("/{id}")
-    fun deleteOrder(@PathVariable id: UUID): ResponseEntity<Void> {
+    @DeleteMapping("/{community}/{id}")
+    fun deleteOrder(@PathVariable community: UUID, @PathVariable id: UUID): ResponseEntity<Void> {
+        var communityEntity = communityService.findById(community)
+
         var result = orderEntityService.findById(id)
+        communityEntity.get().orders.remove(result.get())
+        communityService.save(communityEntity.get())
         if (result.isPresent) {
             orderEntityService.deleteById(id)
             return ResponseEntity.noContent().build()

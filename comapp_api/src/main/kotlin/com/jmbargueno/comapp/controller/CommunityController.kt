@@ -6,6 +6,7 @@ import com.jmbargueno.comapp.dto.toCommunity
 import com.jmbargueno.comapp.dto.toCommunityDTO
 import com.jmbargueno.comapp.model.AppUser
 import com.jmbargueno.comapp.model.Community
+import com.jmbargueno.comapp.model.OrderEntity
 import com.jmbargueno.comapp.service.CommunityService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -58,11 +59,17 @@ class CommunityController(val communityService: CommunityService) {
 
     @GetMapping("/mycommunity")
     fun getCommunityByLogedUser(@AuthenticationPrincipal user: AppUser): CommunityDTO {
-        var id : UUID? = user.memberOf?.id
+        var id: UUID? = user.memberOf?.id
         var result = id?.let { communityService.findById(it) }
+        var filteredOrders: MutableList<OrderEntity> = ArrayList()
         if (result != null) {
-            if (result.isPresent) return result.get().toCommunityDTO()
-            else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la comunidad con id: $id")
-        }else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la comunidad con id: $id")
+            if (result.isPresent) {
+                for (order in result.get().orders) {
+                    if (order.finished == false) filteredOrders.add(order)
+                }
+                result.get().orders = filteredOrders
+                return result.get().toCommunityDTO()
+            } else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la comunidad con id: $id")
+        } else throw ResponseStatusException(HttpStatus.NOT_FOUND, "No se ha encontrado la comunidad con id: $id")
     }
 }

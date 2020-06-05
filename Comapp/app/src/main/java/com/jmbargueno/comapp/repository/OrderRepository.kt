@@ -1,5 +1,6 @@
 package com.jmbargueno.comapp.repository
 
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.jmbargueno.comapp.client.request.RequestNewOrder
@@ -39,8 +40,6 @@ class OrderRepository @Inject constructor(
 
                 }
             }
-
-
         })
         return orders
     }
@@ -66,6 +65,75 @@ class OrderRepository @Inject constructor(
         })
         return lastOrder
     }
+
+    fun getOrderById(id: String): MutableLiveData<Order> {
+        val call: Call<Order> = service.getOrderById(id)
+        call.enqueue(object : Callback<Order> {
+            override fun onFailure(call: Call<Order>, t: Throwable) {
+                Toast.makeText(MyApp.instance, t.message, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onResponse(call: Call<Order>, response: Response<Order>) {
+                lastOrder.value = response.body()
+            }
+
+        })
+        return lastOrder
+    }
+
+    fun assingOrder(id: String): MutableLiveData<Order> {
+        val call: Call<Order> = service.assingOrder(id)
+        call.enqueue(object : Callback<Order> {
+            override fun onFailure(call: Call<Order>, t: Throwable) {
+                Toast.makeText(MyApp.instance, t.message, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onResponse(call: Call<Order>, response: Response<Order>) {
+                lastOrder.value = response.body()
+            }
+
+        })
+        return lastOrder
+    }
+
+    fun deleteOrder(id: String): Boolean {
+        var community = SharedPreferencesModule().getStringValue(Constants.SHARED_PREFERENCES_COMMUNITY)
+        Log.d("COMMUNITY", community)
+        Log.d("ORDER", id)
+        val call: Call<Void> = service.deleteOrder(community!!, id)
+        call.enqueue(object : Callback<Void> {
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                Toast.makeText(MyApp.instance, t.message, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+
+            }
+
+        })
+        return true
+    }
+
+    fun getMyOrdersHistoric(): MutableLiveData<ResponseOrder> {
+        val call: Call<ResponseOrder> = service.getMyOrdersHistoric()
+        call.enqueue(object : Callback<ResponseOrder> {
+            override fun onFailure(call: Call<ResponseOrder>, t: Throwable) {
+                Toast.makeText(MyApp.instance, t.message, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onResponse(call: Call<ResponseOrder>, response: Response<ResponseOrder>) {
+                if (response.isSuccessful) {
+                    orders.value = response.body()
+                } else {
+
+                }
+            }
+
+
+        })
+        return orders
+    }
+
 
 
 }

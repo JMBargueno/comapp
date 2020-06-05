@@ -1,4 +1,4 @@
-package com.jmbargueno.comapp.ui.myorders
+package com.jmbargueno.comapp.ui.historic
 
 import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView
@@ -11,12 +11,13 @@ import com.jmbargueno.comapp.R
 import com.jmbargueno.comapp.common.MyApp
 import com.jmbargueno.comapp.model.Order
 
-
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem].
  * TODO: Replace the implementation with code for your data type.
  */
-class MyUserOrderRecyclerViewAdapter() : RecyclerView.Adapter<MyUserOrderRecyclerViewAdapter.ViewHolder>() {
+class MyOrderHistoricRecyclerViewAdapter() :
+    RecyclerView.Adapter<MyOrderHistoricRecyclerViewAdapter.ViewHolder>() {
+
     private var values: List<Order> = ArrayList()
     private val mOnClickListener: View.OnClickListener
     var id: String = ""
@@ -35,9 +36,11 @@ class MyUserOrderRecyclerViewAdapter() : RecyclerView.Adapter<MyUserOrderRecycle
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_my_orders, parent, false)
+            .inflate(R.layout.fragment_order_historic, parent, false)
         return ViewHolder(view)
     }
+
+    override fun getItemCount(): Int = values.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
@@ -47,14 +50,16 @@ class MyUserOrderRecyclerViewAdapter() : RecyclerView.Adapter<MyUserOrderRecycle
             tag = item
             setOnClickListener(mOnClickListener)
         }
+
+
     }
 
-    override fun getItemCount(): Int = values.size
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val mView: View = view
-        val title: TextView = view.findViewById(R.id.textViewMyOrdersFragmentTitle)
-        val comment: TextView = view.findViewById(R.id.textViewMyOrdersFragmentComments)
+        val title: TextView = view.findViewById(R.id.textViewOrderHistoricFragmentTitle)
+        val comment: TextView = view.findViewById(R.id.textViewOrderHistoricFragmentComments)
+
 
     }
 

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Comapp</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Peticiones</string>
+    <string name="title_dashboard">Mis peticiones</string>
+    <string name="title_notifications">Histórico</string>
     <string name="string_email">Correo Electrónico</string>
     <string name="string_password">Contraseña</string>
     <string name="string_login">Iniciar sesión</string>
@@ -14,4 +14,9 @@
     <string name="string_add_title">Añadit título</string>
     <string name="string_add_comment">Añadir comentario</string>
     <string name="string_addOrder_add">Publicar</string>
+    <string name="string_assing">Asignar</string>
+    <string name="string_not_assigned">Sin asignar</string>
+    <string name="string_my_orders">Mis peticiones</string>
+    <string name="string_my_orders_historic">Histórico</string>
+    <string name="string_orders">Peticiones</string>
 </resources>

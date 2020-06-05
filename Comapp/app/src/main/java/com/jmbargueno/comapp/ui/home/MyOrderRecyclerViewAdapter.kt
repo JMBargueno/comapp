@@ -24,6 +24,7 @@ class MyOrderRecyclerViewAdapter() : RecyclerView.Adapter<MyOrderRecyclerViewAda
     init {
         mOnClickListener = View.OnClickListener { v ->
             val item = v.tag as Order
+            id = item.id.toString()
             var detail: Intent = Intent(MyApp.instance, OrderDetailActivity::class.java).apply {
                 putExtra("id", id)
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK
@@ -40,7 +41,6 @@ class MyOrderRecyclerViewAdapter() : RecyclerView.Adapter<MyOrderRecyclerViewAda
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
-        id = item.id.toString()
         holder.title.text = item.title
         holder.comment.text = item.comment
         with(holder.mView) {

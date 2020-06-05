@@ -9,10 +9,7 @@ import com.jmbargueno.comapp.client.response.ResponseOrder
 import com.jmbargueno.comapp.client.response.ResponseSignUp
 import com.jmbargueno.comapp.model.Order
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface ComappService {
 
@@ -34,7 +31,19 @@ interface ComappService {
     @GET("/order/myorders")
     fun getMyOrders(): Call<ResponseOrder>
 
+    @GET("/order/myorders/historic")
+    fun getMyOrdersHistoric(): Call<ResponseOrder>
+
     @POST("/order/{id}")
     fun newOrder(@Path("id") id: String, @Body request: RequestNewOrder): Call<Order>
+
+    @DELETE("/order/{community}/{order}")
+    fun deleteOrder(@Path("community") community: String, @Path("order") order: String): Call<Void>
+
+    @GET("/order/{id}")
+    fun getOrderById(@Path("id") id: String): Call<Order>
+
+    @PUT("/order/{id}")
+    fun assingOrder(@Path("id") id: String): Call<Order>
 
 }

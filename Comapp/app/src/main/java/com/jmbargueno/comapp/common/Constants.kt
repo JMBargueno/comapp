@@ -2,6 +2,7 @@ package com.jmbargueno.comapp.common
 
 class Constants {
     companion object{
+        val SHARED_PREFERENCES_USER_ID = "user_id"
         val SHARED_PREFERENCES_COMMUNITY = "community"
         val BASE_URL = "http://10.0.2.2:1500/"
         val APP_SETTINGS_FILE = "APP_SETTINGS"

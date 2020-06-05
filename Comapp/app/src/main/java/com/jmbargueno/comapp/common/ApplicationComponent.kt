@@ -2,6 +2,7 @@ package com.jmbargueno.comapp.common
 
 import com.jmbargueno.comapp.*
 import com.jmbargueno.comapp.client.NetworkModule
+import com.jmbargueno.comapp.ui.historic.OrderHistoricFragment
 import com.jmbargueno.comapp.ui.home.OrderFragment
 import com.jmbargueno.comapp.ui.myorders.MyOrdersFragment
 import dagger.Component
@@ -17,4 +18,5 @@ interface ApplicationComponent {
     fun inject(orderDetailActivity: OrderDetailActivity)
     fun inject (orderFragment: OrderFragment)
     fun inject (myOrdersFragment: MyOrdersFragment)
+    fun inject (historicFragment: OrderHistoricFragment)
 }

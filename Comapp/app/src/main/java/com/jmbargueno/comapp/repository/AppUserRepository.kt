@@ -45,6 +45,10 @@ class AppUserRepository @Inject constructor(
                         Constants.SHARED_PREFERENCES_TOKEN,
                         response.body()!!.token
                     )
+                    SharedPreferencesModule().setStringValue(
+                        Constants.SHARED_PREFERENCES_USER_ID,
+                        response.body()!!.user.id.toString()
+                    )
                     Log.d(
                         "TOKEN",
                         SharedPreferencesModule().getSharedPreferences().getString(

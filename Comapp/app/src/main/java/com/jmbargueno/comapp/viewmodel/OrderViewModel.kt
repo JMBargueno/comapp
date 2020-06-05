@@ -19,7 +19,23 @@ class OrderViewModel @Inject constructor(orderRepository: OrderRepository) :
         return respository.getMyOrders()
     }
 
-    fun newOrder(request: RequestNewOrder): LiveData<Order>{
+    fun newOrder(request: RequestNewOrder): LiveData<Order> {
         return respository.newOrder(request)
+    }
+
+    fun getOrderById(id: String): LiveData<Order> {
+        return respository.getOrderById(id)
+    }
+
+    fun assingOrder(id: String): LiveData<Order>{
+        return respository.assingOrder(id)
+    }
+
+    fun deleteOrder(id: String): Boolean{
+        return respository.deleteOrder(id)
+    }
+
+    fun getMyOrdersHistoric(): LiveData<ResponseOrder> {
+        return respository.getMyOrdersHistoric()
     }
 }
