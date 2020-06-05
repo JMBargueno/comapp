@@ -1,5 +1,6 @@
 package com.jmbargueno.comapp.client
 
+import android.util.Log
 import com.jmbargueno.comapp.common.Constants
 import com.jmbargueno.comapp.common.SharedPreferencesModule
 import okhttp3.Interceptor

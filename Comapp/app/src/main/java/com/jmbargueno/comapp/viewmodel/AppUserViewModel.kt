@@ -19,6 +19,7 @@ class AppUserViewModel @Inject constructor(appUserRepository: AppUserRepository)
     }
     fun logOut(): Boolean {
         SharedPreferencesModule().removeStringValue(Constants.SHARED_PREFERENCES_TOKEN)
+        SharedPreferencesModule().removeStringValue(Constants.SHARED_PREFERENCES_COMMUNITY)
         return true
     }
 
