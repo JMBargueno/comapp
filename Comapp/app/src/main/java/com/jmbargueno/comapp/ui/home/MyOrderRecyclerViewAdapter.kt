@@ -19,11 +19,13 @@ import com.jmbargueno.comapp.model.Order
 class MyOrderRecyclerViewAdapter() : RecyclerView.Adapter<MyOrderRecyclerViewAdapter.ViewHolder>() {
     private var values: List<Order> = ArrayList()
     private val mOnClickListener: View.OnClickListener
+    var id: String = ""
 
     init {
         mOnClickListener = View.OnClickListener { v ->
             val item = v.tag as Order
             var detail: Intent = Intent(MyApp.instance, OrderDetailActivity::class.java).apply {
+                putExtra("id", id)
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK
             }
             MyApp.instance.startActivity(detail)
@@ -38,6 +40,7 @@ class MyOrderRecyclerViewAdapter() : RecyclerView.Adapter<MyOrderRecyclerViewAda
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
+        id = item.id.toString()
         holder.title.text = item.title
         holder.comment.text = item.comment
         with(holder.mView) {
